@@ -1,0 +1,43 @@
+{
+  "id": "org.gtk.Gtk3theme.Breeze",
+  "branch": "3.22",
+  "runtime": "org.gnome.Sdk",
+  "build-extension": true,
+  "sdk": "org.gnome.Sdk",
+  "runtime-version": "3.24",
+  "appstream-compose": false,
+  "separate-locales": false,
+  "modules": [
+    {
+      "name": "breeze",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -dm755 /usr/share/runtime/share/themes/Breeze/gtk-3.0",
+        "cp -a Breeze-gtk/assets /usr/share/runtime/share/themes/Breeze/gtk-3.0",
+        "sed -e 's|../assets|assets|g' Breeze-gtk/gtk-3.20/gtk.css > /usr/share/runtime/share/themes/Breeze/gtk-3.0/gtk.css"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://anongit.kde.org/breeze-gtk.git",
+          "branch": "v5.9.5"
+        }
+      ]
+    },
+    {
+      "name": "appdata",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p ${FLATPAK_DEST}/share/appdata",
+        "cp org.gtk.Gtk3theme.Breeze.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose --basename=org.gtk.Gtk3theme.Breeze --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Breeze"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "org.gtk.Gtk3theme.Breeze.appdata.xml"
+        }
+      ]
+  }
+  ]
+}
