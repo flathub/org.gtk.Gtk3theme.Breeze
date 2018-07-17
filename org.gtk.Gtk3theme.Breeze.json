@@ -1,10 +1,10 @@
 {
   "id": "org.gtk.Gtk3theme.Breeze",
   "branch": "3.22",
-  "runtime": "org.gnome.Sdk",
+  "runtime": "org.freedesktop.Platform",
   "build-extension": true,
-  "sdk": "org.gnome.Sdk",
-  "runtime-version": "3.24",
+  "sdk": "org.freedesktop.Sdk",
+  "runtime-version": "1.6",
   "appstream-compose": false,
   "separate-locales": false,
   "modules": [
