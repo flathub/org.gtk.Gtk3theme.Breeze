@@ -20,7 +20,7 @@
         {
           "type": "git",
           "url": "https://anongit.kde.org/breeze-gtk.git",
-          "branch": "v5.9.5"
+          "tag": "v5.14.3"
         }
       ]
     },
