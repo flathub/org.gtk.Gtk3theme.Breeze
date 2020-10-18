@@ -9,18 +9,28 @@
   "separate-locales": false,
   "modules": [
     {
-      "name": "breeze",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -dm755 /usr/share/runtime/share/themes/Breeze/gtk-3.0",
-        "cp -a Breeze-gtk/assets /usr/share/runtime/share/themes/Breeze/gtk-3.0",
-        "sed -e 's|../assets|assets|g' Breeze-gtk/gtk-3.20/gtk.css > /usr/share/runtime/share/themes/Breeze/gtk-3.0/gtk.css"
+      "name": "extra-cmake-modules",
+      "buildsystem": "cmake-ninja",
+      "builddir": true,
+      "config-opts": [
+        "-DBUILD_TESTING=OFF"
       ],
       "sources": [
         {
           "type": "git",
+          "url": "https://anongit.kde.org/frameworks/extra-cmake-modules.git",
+          "tag": "v5.75.0"
+        }
+      ]
+    },
+    {
+      "name": "breeze",
+      "buildsystem": "cmake-ninja",
+      "sources": [
+        {
+          "type": "git",
           "url": "https://anongit.kde.org/breeze-gtk.git",
-          "tag": "v5.14.3"
+          "tag": "v5.20.3"
         }
       ]
     },
@@ -38,6 +48,6 @@
           "path": "org.gtk.Gtk3theme.Breeze.appdata.xml"
         }
       ]
-  }
+    }
   ]
 }
