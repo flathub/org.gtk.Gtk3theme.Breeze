@@ -92,13 +92,13 @@
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze-gtk.git",
-          "tag": "v5.21.3",
+          "tag": "v5.21.5",
           "dest": "breeze-gtk"
         },
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze.git",
-          "tag": "v5.21.3",
+          "tag": "v5.21.5",
           "dest": "breeze"
         }
       ],
