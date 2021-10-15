@@ -1,6 +1,5 @@
 {
   "id": "org.gtk.Gtk3theme.Breeze",
-  "branch": "3.22",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "20.08",
   "build-extension": true,
@@ -26,8 +25,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/sass/sassc/archive/3.6.1.tar.gz",
-          "sha256": "8cee391c49a102b4464f86fc40c4ceac3a2ada52a89c4c933d8348e3e4542a60"
+          "url": "https://github.com/sass/sassc/archive/3.6.2.tar.gz",
+          "sha256": "608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03"
         },
         {
           "type": "script",
@@ -47,8 +46,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/sass/libsass/archive/3.6.4.tar.gz",
-              "sha512": "1f79553be31949d45adf440dcbcf4b828a7e4f71c6f63f288f99451fccc490ebf0c68c58d91deabede37962e35a8cf9af8b0d60d89349fd0adea1ac061c8c2c8"
+              "url": "https://github.com/sass/libsass/archive/3.6.5.tar.gz",
+              "sha512": "98cc7e12fdf74cd9e92d8d4a62b821956d3ad186fcee9a8d77b677a621342aa161b73d9adad4c1849678a3bac890443120cc8febe1b7429aab374321d635b8f7"
             },
             {
               "type": "script",
@@ -84,21 +83,23 @@
       ],
       "build-commands": [
         "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
-        "cd breeze-gtk/src && ./build_theme.sh -c Breeze -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+        "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c Breeze -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+        "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-2.0/* ${FLATPAK_DEST}",
         "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
+        "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-4.0/* ${FLATPAK_DEST}",
         "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze-gtk.git",
-          "tag": "v5.22.0",
+          "tag": "v5.23.0",
           "dest": "breeze-gtk"
         },
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze.git",
-          "tag": "v5.22.0",
+          "tag": "v5.23.0",
           "dest": "breeze"
         }
       ],

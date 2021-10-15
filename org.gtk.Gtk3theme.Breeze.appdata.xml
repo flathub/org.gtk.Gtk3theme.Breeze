@@ -2,10 +2,11 @@
 <component type="runtime">
   <id>org.gtk.Gtk3theme.Breeze</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <name>Breeze Gtk theme</name>
-  <summary>Breeze Gtk theme matching the KDE Breeze theme</summary>
+  <project_license>LGPL-2.1-only</project_license>
+  <name>Breeze GTK theme</name>
+  <summary>Breeze GTK theme matching the KDE Breeze theme</summary>
   <description>
-    <p>Breeze Gtk theme that matches the KDE breeze theme.</p>
+    <p>Breeze GTK theme that matches the KDE breeze theme.</p>
   </description>
-  <url type="homepage">https://quickgit.kde.org/?p=breeze-gtk.git</url>
+  <url type="homepage">https://invent.kde.org/plasma/breeze-gtk</url>
 </component>
