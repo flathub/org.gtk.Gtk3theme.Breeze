@@ -1,5 +1,6 @@
 {
   "id": "org.gtk.Gtk3theme.Breeze",
+  "branch": "3.22",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "20.08",
   "build-extension": true,
