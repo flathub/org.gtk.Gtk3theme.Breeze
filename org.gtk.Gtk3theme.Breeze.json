@@ -2,7 +2,7 @@
   "id": "org.gtk.Gtk3theme.Breeze",
   "branch": "3.22",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "20.08",
+  "runtime-version": "21.08",
   "build-extension": true,
   "sdk": "org.freedesktop.Sdk",
   "appstream-compose": false,
@@ -68,7 +68,7 @@
         "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
         "//": "Check this path after updating runtime",
         "env": {
-          "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.8/site-packages"
+          "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.9/site-packages"
         }
       },
       "//": [
@@ -92,13 +92,13 @@
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze-gtk.git",
-          "tag": "v5.23.0",
+          "tag": "v5.23.1",
           "dest": "breeze-gtk"
         },
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze.git",
-          "tag": "v5.23.0",
+          "tag": "v5.23.1",
           "dest": "breeze"
         }
       ],
