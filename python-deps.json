@@ -14,16 +14,28 @@
           "type": "file",
           "url": "https://pypi.org/packages/source/p/pycairo/pycairo-1.20.1.tar.gz",
           "sha256": "1ee72b035b21a475e1ed648e26541b04e5d7e753d75ca79de8c583b25785531b"
+          "x-checker-data": {
+            "type": "pypi",
+            "name": "pycairo"
+          }
         },
         {
           "type": "file",
           "url": "https://pypi.org/packages/source/s/setuptools/setuptools-58.2.0.tar.gz",
           "sha256": "2c55bdb85d5bb460bd2e3b12052b677879cffcf46c0c688f2e5bf51d36001145"
+          "x-checker-data": {
+            "type": "pypi",
+            "name": "setuptools"
+          }
         },
         {
           "type": "file",
           "url": "https://pypi.org/packages/source/w/wheel/wheel-0.37.0.tar.gz",
           "sha256": "e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad"
+          "x-checker-data": {
+            "type": "pypi",
+            "name": "wheel"
+          }
         }
       ]
     }
