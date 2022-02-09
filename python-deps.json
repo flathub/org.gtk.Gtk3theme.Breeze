@@ -17,8 +17,8 @@
         },
         {
           "type": "file",
-          "url": "https://pypi.org/packages/source/s/setuptools/setuptools-60.2.0.tar.gz",
-          "sha256": "675fcebecb43c32eb930481abf907619137547f4336206e4d673180242e1a278"
+          "url": "https://pypi.org/packages/source/s/setuptools/setuptools-60.8.1.tar.gz",
+          "sha256": "23aad87cc27f4ae704079618c1d117a71bd43d41e355f0698c35f6b1c796d26c"
         },
         {
           "type": "file",
