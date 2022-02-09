@@ -84,7 +84,7 @@
       ],
       "build-commands": [
         "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
-        "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c Breeze -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+        "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
         "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
         "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}"
       ],
@@ -92,13 +92,13 @@
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze-gtk.git",
-          "tag": "v5.23.5",
+          "tag": "v5.24.0",
           "dest": "breeze-gtk"
         },
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze.git",
-          "tag": "v5.23.5",
+          "tag": "v5.24.0",
           "dest": "breeze"
         }
       ],
