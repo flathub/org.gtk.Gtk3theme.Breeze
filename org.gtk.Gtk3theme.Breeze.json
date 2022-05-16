@@ -93,13 +93,23 @@
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze-gtk.git",
           "tag": "v5.24.5",
-          "dest": "breeze-gtk"
+          "commit": "e630a07a28d675241e9c054699fd762baf13a800",
+          "dest": "breeze-gtk",
+          "x-checker-data": {
+            "type": "git",
+            "tag-pattern": "^v([\\d.]+)$"
+          }
         },
         {
           "type": "git",
           "url": "https://invent.kde.org/plasma/breeze.git",
           "tag": "v5.24.5",
-          "dest": "breeze"
+          "commit": "a58410a5de09d54d75c9bd5b7328fc73e6a83365",
+          "dest": "breeze",
+          "x-checker-data": {
+            "type": "git",
+            "tag-pattern": "^v([\\d.]+)$"
+          }
         }
       ],
       "modules": [
