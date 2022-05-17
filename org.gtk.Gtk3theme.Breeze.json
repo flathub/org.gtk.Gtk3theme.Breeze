@@ -90,16 +90,28 @@
       ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://invent.kde.org/plasma/breeze-gtk.git",
-          "tag": "v5.24.5",
-          "dest": "breeze-gtk"
+          "type": "archive",
+          "url": "https://download.kde.org/stable/plasma/5.24.5/breeze-gtk-5.24.5.tar.xz",
+          "sha256": "23716cc08d570ddcf0e739fef2f585f3469d801313ab2c0ba89f494f93f94530",
+          "dest": "breeze-gtk",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 8761,
+            "stable-only": true,
+            "url-template": "https://download.kde.org/stable/plasma/$version/breeze-gtk-$version.tar.xz"
+          }
         },
         {
-          "type": "git",
-          "url": "https://invent.kde.org/plasma/breeze.git",
-          "tag": "v5.24.5",
-          "dest": "breeze"
+          "type": "archive",
+          "url": "https://download.kde.org/stable/plasma/5.24.5/breeze-5.24.5.tar.xz",
+          "sha256": "8525a6b50da5523c3d21c1223e0f2b8ad4a2d147e48e5d128e1c6ee06baaf0a3",
+          "dest": "breeze",
+          "x-checker-data": {
+            "type": "anitya",
+            "project-id": 8761,
+            "stable-only": true,
+            "url-template": "https://download.kde.org/stable/plasma/$version/breeze-$version.tar.xz"
+          }
         }
       ],
       "modules": [
