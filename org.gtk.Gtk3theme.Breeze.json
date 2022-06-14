@@ -1,136 +1,135 @@
 {
-  "id": "org.gtk.Gtk3theme.Breeze",
-  "branch": "3.22",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "21.08",
-  "build-extension": true,
-  "sdk": "org.freedesktop.Sdk",
-  "appstream-compose": false,
-  "separate-locales": false,
-  "cleanup-commands": [
-    "rm -rvf ${FLATPAK_DEST}/_pfx"
-  ],
-  "build-options": {
-    "prefix": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx"
-  },
-  "modules": [
-    {
-      "name": "sassc",
-      "buildsystem": "autotools",
-      "config-opts": [
-        "--with-libsass=/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx"
-      ],
-      "cleanup": [
-        "*"
-      ],
-      "sources": [
+    "id": "org.gtk.Gtk3theme.Breeze",
+    "branch": "3.22",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "21.08",
+    "build-extension": true,
+    "sdk": "org.freedesktop.Sdk",
+    "appstream-compose": false,
+    "separate-locales": false,
+    "cleanup-commands": [
+        "rm -rvf ${FLATPAK_DEST}/_pfx"
+    ],
+    "build-options": {
+        "prefix": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx"
+    },
+    "modules": [
         {
-          "type": "archive",
-          "url": "https://github.com/sass/sassc/archive/3.6.2.tar.gz",
-          "sha256": "608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03"
+            "name": "sassc",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "--with-libsass=/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx"
+            ],
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/sass/sassc/archive/3.6.2.tar.gz",
+                    "sha256": "608dc9002b45a91d11ed59e352469ecc05e4f58fc1259fc9a9f5b8f0f8348a03"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "bootstrap",
+                    "commands": [
+                        "autoreconf -si"
+                    ]
+                }
+            ],
+            "modules": [
+                {
+                    "name": "libsass",
+                    "buildsystem": "autotools",
+                    "cleanup": [
+                        "*"
+                    ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://github.com/sass/libsass/archive/3.6.5.tar.gz",
+                            "sha512": "98cc7e12fdf74cd9e92d8d4a62b821956d3ad186fcee9a8d77b677a621342aa161b73d9adad4c1849678a3bac890443120cc8febe1b7429aab374321d635b8f7"
+                        },
+                        {
+                            "type": "script",
+                            "dest-filename": "bootstrap",
+                            "commands": [
+                                "autoreconf -si"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "type": "script",
-          "dest-filename": "bootstrap",
-          "commands": [
-            "autoreconf -si"
-          ]
-        }
-      ],
-      "modules": [
-        {
-          "name": "libsass",
-          "buildsystem": "autotools",
-          "cleanup": [
-            "*"
-          ],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "https://github.com/sass/libsass/archive/3.6.5.tar.gz",
-              "sha512": "98cc7e12fdf74cd9e92d8d4a62b821956d3ad186fcee9a8d77b677a621342aa161b73d9adad4c1849678a3bac890443120cc8febe1b7429aab374321d635b8f7"
+            "name": "breeze",
+            "buildsystem": "simple",
+            "build-options": {
+                "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
+                "//": "Check this path after updating runtime",
+                "env": {
+                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.9/site-packages"
+                }
             },
-            {
-              "type": "script",
-              "dest-filename": "bootstrap",
-              "commands": [
-                "autoreconf -si"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "breeze",
-      "buildsystem": "simple",
-      "build-options": {
-        "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
-        "//": "Check this path after updating runtime",
-        "env": {
-          "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.9/site-packages"
-        }
-      },
-      "//": [
-        "Build steps recreated according to breeze-gtk/src/CMakeLists.txt to",
-        "avoid depending on ECM, breeze, Qt5, etc. breeze-gtk depends on breeze",
-        "but only needs some color definition in it.",
-
-        "breeze-gtk shares an 'assets' directory between its GTK2 and GTK3",
-        "themes, and gtk.css references to files under that directory using",
-        "relative path names.  Since we are only allowed to write to",
-        "Breeze/gtk-3.0, move assets to this directory and change all",
-        "references."
-      ],
-      "build-commands": [
-        "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
-        "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
-        "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
-        "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://download.kde.org/stable/plasma/5.24.5/breeze-gtk-5.24.5.tar.xz",
-          "sha256": "23716cc08d570ddcf0e739fef2f585f3469d801313ab2c0ba89f494f93f94530",
-          "dest": "breeze-gtk",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 8761,
-            "stable-only": true,
-            "url-template": "https://download.kde.org/stable/plasma/$version/breeze-gtk-$version.tar.xz"
-          }
+            "//": [
+                "Build steps recreated according to breeze-gtk/src/CMakeLists.txt to",
+                "avoid depending on ECM, breeze, Qt5, etc. breeze-gtk depends on breeze",
+                "but only needs some color definition in it.",
+                "breeze-gtk shares an 'assets' directory between its GTK2 and GTK3",
+                "themes, and gtk.css references to files under that directory using",
+                "relative path names.  Since we are only allowed to write to",
+                "Breeze/gtk-3.0, move assets to this directory and change all",
+                "references."
+            ],
+            "build-commands": [
+                "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
+                "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+                "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
+                "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/plasma/5.25.0/breeze-gtk-5.25.0.tar.xz",
+                    "sha256": "acae561d40712e0d42f4d9cbfd63f578b7db1c2f0475b7b0e25ee3671fd5de42",
+                    "dest": "breeze-gtk",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8761,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/plasma/$version/breeze-gtk-$version.tar.xz"
+                    }
+                },
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/plasma/5.25.0/breeze-5.25.0.tar.xz",
+                    "sha256": "946cef6be6d9dd2de492faa3d82552a1a0951e7d74697219db1f5cad7421f04e",
+                    "dest": "breeze",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 8761,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/plasma/$version/breeze-$version.tar.xz"
+                    }
+                }
+            ],
+            "modules": [
+                "python-deps.json"
+            ]
         },
         {
-          "type": "archive",
-          "url": "https://download.kde.org/stable/plasma/5.24.5/breeze-5.24.5.tar.xz",
-          "sha256": "8525a6b50da5523c3d21c1223e0f2b8ad4a2d147e48e5d128e1c6ee06baaf0a3",
-          "dest": "breeze",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": 8761,
-            "stable-only": true,
-            "url-template": "https://download.kde.org/stable/plasma/$version/breeze-$version.tar.xz"
-          }
+            "name": "appdata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 org.gtk.Gtk3theme.Breeze.appdata.xml -t ${FLATPAK_DEST}/share/appdata",
+                "appstream-compose --basename=org.gtk.Gtk3theme.Breeze --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Breeze"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "org.gtk.Gtk3theme.Breeze.appdata.xml"
+                }
+            ]
         }
-      ],
-      "modules": [
-        "python-deps.json"
-      ]
-    },
-    {
-      "name": "appdata",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm644 org.gtk.Gtk3theme.Breeze.appdata.xml -t ${FLATPAK_DEST}/share/appdata",
-        "appstream-compose --basename=org.gtk.Gtk3theme.Breeze --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Breeze"
-      ],
-      "sources": [
-        {
-          "type": "file",
-          "path": "org.gtk.Gtk3theme.Breeze.appdata.xml"
-        }
-      ]
-    }
-  ]
+    ]
 }
