@@ -85,7 +85,9 @@
                 "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
                 "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
                 "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
-                "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}"
+                "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}",
+                "cd breeze-gtk/src && ./build_theme.sh.cmake -c BreezeDark -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+                "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/gtk.css ${FLATPAK_DEST}/gtk-dark.css"
             ],
             "sources": [
                 {
