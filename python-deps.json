@@ -1,43 +1,43 @@
 {
-  "name": "python-deps",
-  "buildsystem": "simple",
-  "build-commands": [],
-  "modules": [
-    {
-      "name": "python3-cairo",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=\"${FLATPAK_DEST}/_pfx\" pycairo"
-      ],
-      "sources": [
+    "name": "python-deps",
+    "buildsystem": "simple",
+    "build-commands": [],
+    "modules": [
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/92/a4/506564f574fa74c90b98690e8ecc8dbae1629f31fcfe0be69de45d9e1605/pycairo-1.21.0.tar.gz",
-          "sha256": "251907f18a552df938aa3386657ff4b5a4937dde70e11aa042bc297957f4b74b",
-          "x-checker-data": {
-              "type": "pypi",
-              "name": "pycairo"
-          }
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/67/25/42e2d6664c3e106c33ecad8356a55e3ae5d81708c89098061a97fbff7cee/setuptools-63.1.0.tar.gz",
-          "sha256": "16923d366ced322712c71ccb97164d07472abeecd13f3a6c283f6d5d26722793",
-          "x-checker-data": {
-              "type": "pypi",
-              "name": "setuptools"
-          }
-        },
-        {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/c0/6c/9f840c2e55b67b90745af06a540964b73589256cb10cc10057c87ac78fc2/wheel-0.37.1.tar.gz",
-          "sha256": "e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4",
-          "x-checker-data": {
-              "type": "pypi",
-              "name": "wheel"
-          }
+            "name": "python3-cairo",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=\"${FLATPAK_DEST}/_pfx\" pycairo"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/92/a4/506564f574fa74c90b98690e8ecc8dbae1629f31fcfe0be69de45d9e1605/pycairo-1.21.0.tar.gz",
+                    "sha256": "251907f18a552df938aa3386657ff4b5a4937dde70e11aa042bc297957f4b74b",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "pycairo"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0a/ba/52611dc8278828eb9ec339e6914a0f865f9e2af967214905927835dfac0a/setuptools-63.2.0.tar.gz",
+                    "sha256": "c04b44a57a6265fe34a4a444e965884716d34bae963119a76353434d6f18e450",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "setuptools"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c0/6c/9f840c2e55b67b90745af06a540964b73589256cb10cc10057c87ac78fc2/wheel-0.37.1.tar.gz",
+                    "sha256": "e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "wheel"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
