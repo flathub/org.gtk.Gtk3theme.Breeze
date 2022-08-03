@@ -21,8 +21,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a8/d9/28490a9ef6592c3471bd1bcacaf5bd0dee2bb05c8a8bcf901e673b2f1732/setuptools-63.3.0.tar.gz",
-                    "sha256": "273b6847ae61f7829c1affcdd9a32f67aa65233be508f4fbaab866c5faa4e408",
+                    "url": "https://files.pythonhosted.org/packages/48/b7/92671fba6952de2f0240e6a3251bf9674b2ed0cc6e3d5f756d753404ee15/setuptools-63.4.0.tar.gz",
+                    "sha256": "d36f579e989a90e8106b9061599c707d912e9cd296b30d62cb6b4dd3567a5ddc",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools"
