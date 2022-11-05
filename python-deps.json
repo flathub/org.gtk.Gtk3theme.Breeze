@@ -30,8 +30,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7a/b0/29c0c8c6f8cebeb0de4c17bc44365cba0b35cb4246e4a27a7e12ecf92d73/wheel-0.38.1.tar.gz",
-                    "sha256": "ea041edf63f4ccba53ad6e035427997b3bb10ee88a4cd014ae82aeb9eea77bb9",
+                    "url": "https://files.pythonhosted.org/packages/a4/5b/0718aa11e3360f97feb81ddcb19cbb9306df0a17bef7c360f8939d2629b8/wheel-0.38.2.tar.gz",
+                    "sha256": "3d492ef22379a156ec923d2a77051cedfd4df4b667864e9e41ba83f0b70b7149",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "wheel"
