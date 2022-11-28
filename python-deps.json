@@ -12,8 +12,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e5/9f/541adc3a06ea28369c4ab52d2cf95597bb2ef626b3cf1c61afa26f735461/pycairo-1.22.0.tar.gz",
-                    "sha256": "b34517abdf619d4c7f0274f012b398d9b03bab7adc3efd2912bf36be3f911f3f",
+                    "url": "https://files.pythonhosted.org/packages/69/ca/9e9fa2e8be0876a9bbf046a1be7ee33e61d4fdfbd1fd25c76c1bdfddf8c4/pycairo-1.23.0.tar.gz",
+                    "sha256": "9b61ac818723adc04367301317eb2e814a83522f07bbd1f409af0dada463c44c",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "pycairo"
