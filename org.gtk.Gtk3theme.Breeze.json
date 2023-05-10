@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.4/breeze-gtk-5.27.4.tar.xz",
-                    "sha256": "cb967dcd258065f87a9cb43f8022378e7ead1db83590ca2eea4e77196226999f",
+                    "url": "https://download.kde.org/stable/plasma/5.27.5/breeze-gtk-5.27.5.tar.xz",
+                    "sha256": "c4956ddab4d65471dcf26634672c088b4499d27f766e41b6a8d083442e55c968",
                     "dest": "breeze-gtk",
                     "x-checker-data": {
                         "type": "anitya",
