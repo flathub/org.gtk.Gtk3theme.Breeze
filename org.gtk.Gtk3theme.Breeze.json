@@ -116,8 +116,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.3/breeze-5.27.3.tar.xz",
-                    "sha256": "7764f5bcce91e487c8756ab7c0d8a14d2bc36f97c8c33f82a70d81380e78798a",
+                    "url": "https://download.kde.org/stable/plasma/5.27.5/breeze-5.27.5.tar.xz",
+                    "sha256": "70d8a35bf8c0758f9c3e3873b657250b1e09c1c79f92b066d3385a1e44fec868",
                     "dest": "breeze",
                     "x-checker-data": {
                         "type": "anitya",
