@@ -21,8 +21,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/25/f3/d68c20919bc774c6cb127f1762f2f2f999d700a58198556e883dd3700e58/setuptools-67.6.0.tar.gz",
-                    "sha256": "2ee892cd5f29f3373097f5a814697e397cf3ce313616df0af11231e2ad118077",
+                    "url": "https://files.pythonhosted.org/packages/03/20/630783571e76e5fa5f3e9f29398ca3ace377207b8196b54e0ffdf09f12c1/setuptools-67.8.0.tar.gz",
+                    "sha256": "62642358adc77ffa87233bc4d2354c4b2682d214048f500964dbe760ccedf102",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools"
@@ -30,8 +30,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a2/b8/6a06ff0f13a00fc3c3e7d222a995526cbca26c1ad107691b6b1badbbabf1/wheel-0.38.4.tar.gz",
-                    "sha256": "965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac",
+                    "url": "https://files.pythonhosted.org/packages/fc/ef/0335f7217dd1e8096a9e8383e1d472aa14717878ffe07c4772e68b6e8735/wheel-0.40.0.tar.gz",
+                    "sha256": "cd1196f3faee2b31968d626e1731c94f99cbdb67cf5a46e4f5656cbee7738873",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "wheel"
