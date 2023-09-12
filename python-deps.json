@@ -12,8 +12,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/ca/9e9fa2e8be0876a9bbf046a1be7ee33e61d4fdfbd1fd25c76c1bdfddf8c4/pycairo-1.23.0.tar.gz",
-                    "sha256": "9b61ac818723adc04367301317eb2e814a83522f07bbd1f409af0dada463c44c",
+                    "url": "https://files.pythonhosted.org/packages/a2/dd/bc2c9ee9485308a29c18b1241329e677917af25c60b127857f0fb23d0c6e/pycairo-1.24.0.tar.gz",
+                    "sha256": "1444d52f1bb4cc79a4a0c0fe2ccec4bd78ff885ab01ebe1c0f637d8392bcafb6",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "pycairo"
@@ -21,8 +21,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/25/f3/d68c20919bc774c6cb127f1762f2f2f999d700a58198556e883dd3700e58/setuptools-67.6.0.tar.gz",
-                    "sha256": "2ee892cd5f29f3373097f5a814697e397cf3ce313616df0af11231e2ad118077",
+                    "url": "https://files.pythonhosted.org/packages/e9/37/c6a6eb1ebeea919e4f394d811f234322d8a99eb58d5ee0f6089dbf06c488/setuptools-68.2.1.tar.gz",
+                    "sha256": "56ee14884fd8d0cd015411f4a13f40b4356775a0aefd9ebc1d3bfb9a1acb32f1",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools"
@@ -30,8 +30,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a2/b8/6a06ff0f13a00fc3c3e7d222a995526cbca26c1ad107691b6b1badbbabf1/wheel-0.38.4.tar.gz",
-                    "sha256": "965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac",
+                    "url": "https://files.pythonhosted.org/packages/a4/99/78c4f3bd50619d772168bec6a0f34379b02c19c9cced0ed833ecd021fd0d/wheel-0.41.2.tar.gz",
+                    "sha256": "0c5ac5ff2afb79ac23ab82bab027a0be7b5dbcf2e54dc50efe4bf507de1f7985",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "wheel"
