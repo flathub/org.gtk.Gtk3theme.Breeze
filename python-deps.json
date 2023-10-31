@@ -12,8 +12,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/db/f1/45f288a45215e12dea5a107a2e686e33902701d5485219437b5d64d1080a/pycairo-1.25.0.tar.gz",
-                    "sha256": "37842b9bfa6339c45a5025f752e1d78d5840b1a0f82303bdd5610846ad8b5c4f",
+                    "url": "https://files.pythonhosted.org/packages/c7/7c/de4d40316ee563e4f15a0f05f28c8458833fbef80c4588b9dd51f39b78ee/pycairo-1.25.1.tar.gz",
+                    "sha256": "7e2be4fbc3b4536f16db7a11982cbf713e75069a4d73d44fe5a49b68423f5c0c",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "pycairo"
@@ -30,8 +30,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a2/b8/6a06ff0f13a00fc3c3e7d222a995526cbca26c1ad107691b6b1badbbabf1/wheel-0.38.4.tar.gz",
-                    "sha256": "965f5259b566725405b05e7cf774052044b1ed30119b5d586b2703aafe8719ac",
+                    "url": "https://files.pythonhosted.org/packages/fb/d0/0b4c18a0b85c20233b0c3bc33f792aefd7f12a5832b4da77419949ff6fd9/wheel-0.41.3.tar.gz",
+                    "sha256": "4d4987ce51a49370ea65c0bfd2234e8ce80a12780820d9dc462597a6e60d0841",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "wheel"
