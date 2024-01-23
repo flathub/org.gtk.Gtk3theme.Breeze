@@ -53,8 +53,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/sass/libsass/archive/3.6.5.tar.gz",
-                            "sha512": "98cc7e12fdf74cd9e92d8d4a62b821956d3ad186fcee9a8d77b677a621342aa161b73d9adad4c1849678a3bac890443120cc8febe1b7429aab374321d635b8f7",
+                            "url": "https://github.com/sass/libsass/archive/3.6.6.tar.gz",
+                            "sha512": "659828c854af391c10a16954425fbeeb5fa036189dea45555cd8046338f7469eb7f8d84134030ce644921514b8f397ef6070b56dfb116ea7ce94328d64576518",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 11766,
@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.8/breeze-gtk-5.27.8.tar.xz",
-                    "sha256": "400f452b73dbe4afa3ce346e4769fed13798bf6413edd5e74a2504c20eefeace",
+                    "url": "https://download.kde.org/stable/plasma/5.27.10/breeze-gtk-5.27.10.tar.xz",
+                    "sha256": "1da3f98cce2761bb2c9c72d0156b93cf7bf50f08d59fd64bfeb06149a87069b6",
                     "dest": "breeze-gtk",
                     "x-checker-data": {
                         "type": "anitya",
@@ -116,8 +116,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.8/breeze-5.27.8.tar.xz",
-                    "sha256": "cda48253cb74a4f18c0edbc3065a61055cafcb167362c4e90be52182b0e73e44",
+                    "url": "https://download.kde.org/stable/plasma/5.27.10/breeze-5.27.10.tar.xz",
+                    "sha256": "bebc960752da9d53a9895ffc05d824cba702735428aa61347b703fea074700a2",
                     "dest": "breeze",
                     "x-checker-data": {
                         "type": "anitya",
