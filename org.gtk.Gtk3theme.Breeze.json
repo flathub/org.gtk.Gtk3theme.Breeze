@@ -2,7 +2,7 @@
     "id": "org.gtk.Gtk3theme.Breeze",
     "branch": "3.22",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "23.08",
     "build-extension": true,
     "sdk": "org.freedesktop.Sdk",
     "appstream-compose": false,
@@ -80,7 +80,7 @@
                 "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
                 "//": "Check this path after updating runtime",
                 "env": {
-                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.9/site-packages"
+                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.11/site-packages"
                 }
             },
             "//": [
@@ -95,7 +95,7 @@
             ],
             "build-commands": [
                 "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
-                "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+                "cd breeze-gtk/src && sed -i 's/@Python3_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
                 "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
                 "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}",
                 "cd breeze-gtk/src && ./build_theme.sh.cmake -c BreezeDark -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
