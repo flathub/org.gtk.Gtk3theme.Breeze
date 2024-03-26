@@ -2,7 +2,7 @@
     "id": "org.gtk.Gtk3theme.Breeze",
     "branch": "3.22",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "23.08",
     "build-extension": true,
     "sdk": "org.freedesktop.Sdk",
     "appstream-compose": false,
@@ -80,7 +80,7 @@
                 "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
                 "//": "Check this path after updating runtime",
                 "env": {
-                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.9/site-packages"
+                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.11/site-packages"
                 }
             },
             "//": [
@@ -95,7 +95,7 @@
             ],
             "build-commands": [
                 "find breeze-gtk/src -name '*.scss' -print -execdir sed -i 's#\\.\\./assets/#./assets/#' {} \\;",
-                "cd breeze-gtk/src && sed -i 's/@PYTHON_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
+                "cd breeze-gtk/src && sed -i 's/@Python3_EXECUTABLE@/python3/g' build_theme.sh.cmake && ./build_theme.sh.cmake -c BreezeLight -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
                 "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/gtk-3.0/* ${FLATPAK_DEST}",
                 "cp -rv --no-preserve=ownership ${FLATPAK_BUILDER_BUILDDIR}/Breeze/assets ${FLATPAK_DEST}",
                 "cd breeze-gtk/src && ./build_theme.sh.cmake -c BreezeDark -t ${FLATPAK_BUILDER_BUILDDIR}/Breeze -r ${FLATPAK_BUILDER_BUILDDIR}/breeze/colors",
@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.10/breeze-gtk-5.27.10.tar.xz",
-                    "sha256": "1da3f98cce2761bb2c9c72d0156b93cf7bf50f08d59fd64bfeb06149a87069b6",
+                    "url": "https://download.kde.org/stable/plasma/6.0.2/breeze-gtk-6.0.2.tar.xz",
+                    "sha256": "a612990937e0c0c6ce386c20f33bf7b6a59c321b6b6f9d2a705163ffdeae7dda",
                     "dest": "breeze-gtk",
                     "x-checker-data": {
                         "type": "anitya",
@@ -116,8 +116,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/5.27.10/breeze-5.27.10.tar.xz",
-                    "sha256": "bebc960752da9d53a9895ffc05d824cba702735428aa61347b703fea074700a2",
+                    "url": "https://download.kde.org/stable/plasma/6.0.2/breeze-6.0.2.tar.xz",
+                    "sha256": "4c67f5a59a9a37c96754552c7a5076d29ea7864ac50fa9766719764ed94fb4cc",
                     "dest": "breeze",
                     "x-checker-data": {
                         "type": "anitya",
