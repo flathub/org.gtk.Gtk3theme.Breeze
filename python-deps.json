@@ -25,7 +25,10 @@
                     "sha256": "bea195a800f510ba3a2bc65645c88b7e016fe36709fefc58a880c4ae8a0138d7",
                     "x-checker-data": {
                         "type": "pypi",
-                        "name": "setuptools"
+                        "name": "setuptools",
+                        "versions": {
+                            "<=": "74.1.0"
+                        }
                     }
                 },
                 {
