@@ -16,7 +16,10 @@
                     "sha256": "a11b999ce55b798dbf13516ab038e0ce8b6ec299b208d7c4e767a6f7e68e8430",
                     "x-checker-data": {
                         "type": "pypi",
-                        "name": "pycairo"
+                        "name": "pycairo",
+                        "versions": {
+                            "<": "1.27.0"
+                        }
                     }
                 },
                 {
