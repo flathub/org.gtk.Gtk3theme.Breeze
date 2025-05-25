@@ -5,7 +5,6 @@
     "runtime-version": "24.08",
     "build-extension": true,
     "sdk": "org.freedesktop.Sdk",
-    "appstream-compose": false,
     "separate-locales": false,
     "cleanup-commands": [
         "rm -rvf ${FLATPAK_DEST}/_pfx"
@@ -135,8 +134,7 @@
             "name": "appdata",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm644 org.gtk.Gtk3theme.Breeze.appdata.xml -t ${FLATPAK_DEST}/share/appdata",
-                "appstream-compose --basename=org.gtk.Gtk3theme.Breeze --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.Breeze"
+                "install -Dm644 org.gtk.Gtk3theme.Breeze.appdata.xml -t ${FLATPAK_DEST}/share/appdata"
             ],
             "sources": [
                 {
