@@ -103,8 +103,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/6.4.0/breeze-gtk-6.4.0.tar.xz",
-                    "sha256": "5852632714c4d7b77548151ef5e7dedaded331f6e90111b16dd710e01bba8fad",
+                    "url": "https://download.kde.org/stable/plasma/6.4.2/breeze-gtk-6.4.2.tar.xz",
+                    "sha256": "48e5b52a95176461a53bd53b3fe9513c4c9c27155cad6f8830c78bcc403cb68d",
                     "dest": "breeze-gtk",
                     "x-checker-data": {
                         "type": "anitya",
@@ -115,8 +115,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma/6.4.1/breeze-6.4.1.tar.xz",
-                    "sha256": "4fe0085ffa21b2e3aef49dc4e5c862f22ef13395a9681387a990308743f01c55",
+                    "url": "https://download.kde.org/stable/plasma/6.4.2/breeze-6.4.2.tar.xz",
+                    "sha256": "4607ab451d0d15f0d0815243d07fd5f5709985f7eb2bef1bf4ca1691b470aab5",
                     "dest": "breeze",
                     "x-checker-data": {
                         "type": "anitya",
