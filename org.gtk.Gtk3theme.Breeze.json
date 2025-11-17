@@ -2,7 +2,7 @@
     "id": "org.gtk.Gtk3theme.Breeze",
     "branch": "3.22",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "build-extension": true,
     "sdk": "org.freedesktop.Sdk",
     "separate-locales": false,
@@ -79,7 +79,7 @@
                 "append-path": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/bin",
                 "//": "Check this path after updating runtime",
                 "env": {
-                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.11/site-packages"
+                    "PYTHONPATH": "/usr/share/runtime/share/themes/Breeze/gtk-3.0/_pfx/lib/python3.13/site-packages"
                 }
             },
             "//": [
