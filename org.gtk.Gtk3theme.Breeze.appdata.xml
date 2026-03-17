@@ -10,8 +10,11 @@
   </description>
   <url type="homepage">https://invent.kde.org/plasma/breeze-gtk</url>
   <releases>
-    <release version="6.6.2" date="2026-03-03">
+    <release version="6.6.3" date="2026-03-17">
       <description></description>
+    </release>
+    <release version="6.6.2" date="2026-03-03">
+      <description/>
     </release>
     <release version="6.5.5" date="2026-01-13">
       <description/>
