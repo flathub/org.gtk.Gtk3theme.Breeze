@@ -4,3 +4,4 @@
   ```sh
   flatpak override --user --filesystem=xdg-config/gtk-3.0:ro
   ```
+- Dark theme is known to be broken in the app using X11, related issue [#170](https://github.com/flathub/org.gtk.Gtk3theme.Breeze/issues/170). There is no workaround at the moment, you can use another theme (e.g. Adwaita or Adapta) as an alternative.
